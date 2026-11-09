@@ -24,6 +24,7 @@ h1{font-size:28px} h2{margin-top:30px;font-size:20px} p,li{font-size:15px}
 <li>사용자가 다운로드 대상으로 선택한 콘텐츠</li>
 <li>확장 프로그램의 언어, 다운로드 형식 및 폴더 설정</li>
 <li>중복 다운로드 방지를 위한 로컬 다운로드 기록</li>
+<li>라이선스 인증을 위한 로그인 아이디, IP 주소 및 접속 기록 (아래 12항 참조)</li>
 </ul>
 
 <h2>3. 정보의 이용 목적</h2>
@@ -50,7 +51,7 @@ h1{font-size:28px} h2{margin-top:30px;font-size:20px} p,li{font-size:15px}
 <p><strong>로컬 저장소 사용:</strong> Suno Downloader는 대용량 Suno 라이브러리 캐시, 다운로드 기록, 사용자 설정을 브라우저의 로컬 저장소에 보관합니다. 이 데이터는 사용자의 기기에만 저장되며, 아래 7항의 Remix Sound Mastering 및 SUNO Playlist Video 연동을 이용하는 경우를 제외하고 외부 서버로 전송되지 않습니다.</p>
 
 <h2>7. Remix Sound Mastering 및 SUNO Playlist Video 연동</h2>
-<p>사용자가 Remix Sound Mastering 사이트(https://remix-sound-mastering.bbyssong.workers.dev/) 또는 SUNO Playlist Video 사이트(https://suno-playlist.bbyssong.workers.dev/)에서 곡 목록을 요청하면, 확장 프로그램은 사용자의 Suno 곡 목록(곡 제목, 재생 시간, 생성일)을 해당 사이트에 전달할 수 있습니다. 사용자가 해당 사이트에서 가져오기를 확인한 곡에 한해, 해당 곡의 음원 바이트가 해당 사이트에 전달됩니다.</p>
+<p>사용자가 Remix Sound Mastering 사이트(https://remix-sound-mastering.bbyssong.workers.dev/) 또는 SUNO Playlist Video 사이트(https://suno-playlist.bbyssong.workers.dev/)에서 곡 목록을 요청하면, 확장 프로그램은 사용자의 Suno 곡 목록(곡 제목, 재생 시간, 생성일)을 해당 사이트에 전달할 수 있습니다. 사용자가 해당 사이트에서 가져오기를 확인한 곡에 한해, 해당 곡의 음원 바이트와 가사(SRT)가 해당 사이트에 전달됩니다.</p>
 <p>로그인 토큰, 쿠키, 서명 URL은 해당 사이트에 전달되지 않습니다. 전달된 정보는 Remix Sound Mastering 페이지에서는 마스터링을 위해, SUNO Playlist Video 페이지에서는 플레이리스트 영상 제작을 위해 브라우저 안에서 처리됩니다. 위 연동을 이용하지 않으면 이 전달은 일어나지 않습니다.</p>
 
 <h2>8. 파일 저장 및 외부 서버</h2>
@@ -64,5 +65,15 @@ h1{font-size:28px} h2{margin-top:30px;font-size:20px} p,li{font-size:15px}
 
 <h2>11. 문의</h2>
 <p>개인정보처리방침 또는 확장 프로그램의 개인정보 처리와 관련한 문의는 확장 프로그램을 제공하는 개발자에게 문의할 수 있습니다.</p>
+
+<h2>12. 라이선스 인증</h2>
+<p>Suno Downloader는 라이선스 인증을 위해 비밀번호 관리 서버(https://pw.bbyssong.workers.dev/)와 통신합니다. 라이선스 인증 시 다음과 같은 정보가 처리됩니다.</p>
+<ul>
+<li>로그인 아이디</li>
+<li>비밀번호 (해시 처리되어 저장되며, 평문으로 저장되지 않습니다)</li>
+<li>IP 주소 및 접속 기록 (로그인·검증 시점)</li>
+<li>라이선스 토큰 (브라우저 저장소에 보관되며, 60초마다 검증 요청 시 서버에 전송됩니다)</li>
+</ul>
+<p>위 정보는 라이선스 인증 및 사용 기간 확인을 위한 목적으로만 사용되며, 광고·사용자 추적·마케팅 목적으로 사용하지 않습니다. 라이선스 토큰은 사용자의 기기에만 저장되며, 인증 서버에 전송되는 것은 검증 요청 시에만 이루어집니다.</p>
 </body>
 </html>
